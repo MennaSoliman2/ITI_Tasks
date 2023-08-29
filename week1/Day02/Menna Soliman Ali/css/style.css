@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.container{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.links{
+    background-color: rgba(142, 119, 84,0.7);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 0px 20px 30px ;
+    
+}
+.links a{
+    color: white;
+    text-decoration: none;
+    padding-top: 20px;
+    padding-left: 10px;
+    transition: 0.3s;
+}
+.links a:hover{
+    color: #130e06;
+}
+.home{
+    text-align: center;
+}
+.home img{
+    width: 100%;
+    height: 600px;
+    margin-bottom: 30px;   
+}
+.home button{
+    font-size: 18px;
+    margin-bottom: 40px;
+    padding: 10px 15px;
+    color: white;
+    background-color: #8E7754;
+    border: 1px solid #8E7754;
+}
+.about{
+    background-color: #F8F8F8;
+}
+.home button:hover{
+    color: #8E7754;
+    background-color: #fff;
+}
+.contain{
+    padding: 40px 0;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.contain .img img{
+    width: 550px;
+}
+.contain .text h2{
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 44.16px;
+    color: rgb(48, 48, 48);
+    font-family: 'Alegreya', serif;
+}
+.contain .text p{
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 17px;
+    padding: 20px;
+    line-height: 31.62px;
+
+}
+/* products */
+
+.container .pro{
+    padding: 40px 0px;
+}
+
+.container .pro h2{
+    font-family: 'Alegreya', serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 41.4px;
+    margin-bottom: 40px;
+    color: rgb(48, 48, 48);
+    text-align: center;
+}
+.container .items{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.container .items .col{
+    width: calc(100% / 3 - 20px);
+}
+.container .items .col .image img{
+    width: 100%;
+}
+.container .items .col .text{
+    text-align: center;
+    padding: 20px 10px;
+    
+}
+.container .items .col .text h3{
+    /* font-family: 'Alegreya', serif; */
+    font-weight: 400;
+    line-height: 30.36px;
+    color: rgb(48, 48, 48);
+    font-size:  22px;
+    padding-bottom: 15px;
+}
+
+.container .items .col .text p{
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 400;
+    line-height: 31.62px;
+    color: rgb(104, 104, 104);
+    font-size:  17px;
+}
+
+/* contact */
+.contact{
+    padding: 40px 0;
+}
+.contact h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 44.16px;
+    color: rgb(48, 48, 48);
+    font-family: 'Alegreya', serif;
+    margin: 20px 0;
+}
+.contact form{
+    width: 80%;
+    text-align: center;
+    padding: 40px;
+    border:1px solid #8E7754;
+    border-radius: 10px;
+    margin: auto;
+    background-color: white;
+
+    }
+    .contact form input{
+        display: block;
+        margin-bottom: 30px;
+    }
+    .contact form input[type='text']{
+    border:1px solid black;
+    height: 30px;
+    padding: 5px;
+    border-radius:5px;
+    width: 40%;
+    display: inline;
+    margin-right: 32px;
+    }
+    .contact form input[type='number']{
+        border:1px solid black;
+        height: 30px;
+        padding: 5px;
+        border-radius:5px;
+        width: 40%;
+        display: inline;
+        align-self: flex-end;
+    }
+    .contact form textarea{
+        border:1px solid black;
+        height: 70px;
+        padding: 10px;
+        border-radius:5px;
+        width: 85%;
+    }
+    .contact form input[type='submit']{
+        background-color: #8E7754;
+        padding: 10px 40px;
+        color: white;
+        border: 1px solid #8E7754;
+        border-radius: 10px;
+        margin-top: 40px;
+        margin-left:40%;
+        margin-right:24%;
+              
+    }
+    .contact form input[type='submit']:hover{
+        color: black;
+        background-color: #fff;
+    }
+
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // the String.prototype.replaceAll() method,
+        //  which is a more powerful version of the existing String.prototype.replace() method.
+        //  The replaceAll() method allows you to replace all occurrences of a substring in a string with a new substring,
+        //  whereas the replace() method only replaces the first occurrence.
+        const string = 'The quick brown fox jumped over the lazy dog';
+        const newString = string.replaceAll('the', 'a');
+        console.log(newString); // "The quick brown fox jumped over a lazy dog"
+
+
+        // the Promise.any() method,
+        //  which allows you to wait for the first promise to resolve or reject,
+        //   regardless of whether the other promises have already resolved or rejected.
+        //    This is in contrast to the existing Promise.all() method,
+        //  which waits for all promises to resolve or reject before returning.
+
+
+        const promise1 = new Promise((resolve, reject) => setTimeout(() => resolve('Promise 1 resolved'), 1000));
+        const promise2 = new Promise((resolve, reject) => setTimeout(() => reject('Promise 2 rejected'), 500));
+        const promise3 = new Promise((resolve, reject) => setTimeout(() => resolve('Promise 3 resolved'), 1500));
+
+        Promise.any([promise1, promise2, promise3])
+        .then(result => console.log(result))
+        .catch(error => console.error(error));
+    </script>
+</body>
+</html>

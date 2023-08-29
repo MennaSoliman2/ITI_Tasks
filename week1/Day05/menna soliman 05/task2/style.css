@@ -1,0 +1,31 @@
+.header{
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+}
+h1{
+    color: brown;
+    margin-bottom:20px ;
+}
+p{
+    color: rgb(20, 145, 103);
+    font-size: 18px;
+    line-height: 30px;
+}
+button{
+    padding: 10px 20px;
+    margin-right: 80px;
+    margin-top: 20px;
+    background-color: violet ;
+    cursor: pointer;
+
+}

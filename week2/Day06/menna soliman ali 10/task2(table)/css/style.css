@@ -1,0 +1,77 @@
+.header{
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.contact{
+    padding: 40px 0px;
+}
+.contact{
+    width: 650px;
+    text-align: center;
+    padding: 40px;
+    border:1px solid #8E7754;
+    border-radius: 10px;
+    margin: auto;
+    background-color: white;
+    }
+    .contact input{
+        display: block;
+        margin-bottom: 30px;
+    }
+    .contact input[type='text']{
+    border:1px solid black;
+    height: 30px;
+    padding: 5px;
+    border-radius:5px;
+    width: 80%;
+    display: inline;
+    }
+    .contact input[type='number']{
+        border:1px solid rgb(94, 87, 87);
+        height: 30px;
+        padding: 5px;
+        border-radius:5px;
+        width: 80%;
+        display: inline;
+        align-self: flex-end;
+}
+.contact input[type='submit']{
+        background-color: #8E7754;
+        padding: 10px 40px;
+        color: white;
+        border: 1px solid #8E7754;
+        border-radius: 10px;
+        margin-top: 40px;
+        margin-left:32%;
+        margin-right:24%;
+        font-size: 20px;
+              
+}
+.contact  input[type='submit']:hover{
+    color: black;
+    background-color: #fff;
+}
+
+table{
+    margin-left: 20%;
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+table th{
+    padding: 10px 40px;
+}
+table tbody td{
+    padding: 10px 60px;
+    
+}

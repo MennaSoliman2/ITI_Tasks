@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400&family=Alegreya:ital,wght@1,400;1,500;1,600&family=Nunito:wght@200;300;400;500;600&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="contact" id="contact">
+            <div class="container">
+                <h2> Contact Us</h2>
+                <input type="text" placeholder="Enter your name here" name="name">
+                <p class="alret" id="namevalid">Your Name Length must be greater than 3</p>
+                <input type="number" placeholder="Enter your age here" name="age">
+                <p class="alret" id="agevalid">Your age must be greater than 18</p>
+                <input type="submit" value="Login" class="cen" onclick="checkValid()">
+                <h6 id="isvalid"></h6>
+            </div>
+        </div>
+    </div>    
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="login">
+        <form action="">
+            <input id="input1" type="text" placeholder="Enter your name">
+            <p id="error1">name should be greater than 3</p>
+            <input id="input2" type="number" placeholder="enter your age">
+            <p id="error2">age should be greater than 18</p>
+            <label for="city">Choose city:</label>
+            <select id="city" required>
+                <option value="city1">cairo</option>
+                <option value="city2">banha</option>
+                <option value="city3">giza</option>
+            </select>
+            <div id="check">
+                <label for="">tennis</label>
+                <input type="checkbox" id="checkbox1">
+                <label for="">football</label>
+                <input type="checkbox" id="checkbox2">
+                <label for="">swimming</label>
+                <input type="checkbox" id="checkbox3">
+            </div>
+            <button id="register">register</button>
+            <button id="reset">reset</button>
+            <p id="valid">valid data</p>
+        </form>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
+
+
+var nameInput = document.getElementById('input1');
+var nameError = document.getElementById('error1');
+var ageInput = document.getElementById('input2');
+var ageError = document.getElementById('error2');
+var sportCheckboxes = document.querySelectorAll('#check input[type="checkbox"]');
+var registerButton = document.getElementById('register');
+var resetButton = document.getElementById('reset');
+var validMessage = document.getElementById('valid');
+
+nameInput.addEventListener('input', function () {
+    if (nameInput.value.length <= 3) {
+        nameError.style.display = 'block';
+        nameError.style.color = 'red';
+    } else {
+        nameError.style.display = 'none';
+    }
+});
+
+ageInput.addEventListener('input', function () {
+    if (ageInput.value <= 18) {
+        ageError.style.display = 'block';
+        ageError.style.color = 'red';
+    } else {
+        ageError.style.display = 'none';
+    }
+});
+
+registerButton.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    let checkedCount = 0;
+    sportCheckboxes.forEach(function (checkbox) {
+        if (checkbox.checked) {
+            checkedCount++;
+        }
+    });
+
+    if (checkedCount !== 2 || nameInput.value.length <= 3 || ageInput.value <= 18) {
+        validMessage.style.display = 'none';
+    } else {
+        validMessage.style.display = 'block';
+    }
+
+});
+reset.onclick = function () {
+    document.querySelector("Form").reset();
+    nameInput.value = "";
+    ageInput.value = "";
+    nameError.style.display = 'none';
+    ageError.style.display = 'none';
+    validMessage.style.display = 'none';
+    sportCheckboxes.forEach(function (checkbox) {
+        checkbox.checked = false;
+    }
+    )
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function checkboxes() {
+    var chboxes = document.getElementsByName("chbox");
+    counter = 0;
+    for (var i = 0; i < chboxes.length; i++) {
+        if (chboxes[i].checked == true) {
+            counter++;
+        }
+    }
+    if (counter < 2) {
+        var p4 = document.getElementById("p4");
+        p4.style.display = "block";
+    }
+    else { flag2 = true; }
+}
+function reset() {
+    location.reload();
+}
+
+
+var name1 = document.getElementById("name");
+name1.addEventListener("focus", function () {
+    if (!(typeof name1 == "string" && name1.length > 4)) {
+        var p1 = document.getElementById("p1");
+        p1.style.display = "block";
+        p1.style.color = "red";
+    }
+});
+//--------------------------------------------
+var age1 = document.getElementById("age");
+age1.addEventListener("focus", function () {
+    if (age1.value == NaN && age1 < 18) {
+        var p2 = document.getElementById("p2");
+        p2.style.display = "block";
+        p2.style.color = "red";
+    }
+});
+//--------------------------------------------
+var flag = false;
+function selectCity() {
+    if (document.getElementById("city").checked = false) {
+        var p3 = document.getElementById("p3");
+        p3.style.display = "block";
+        p3.style.color = "red";
+        flag = false;
+    }
+    else
+        flag = true;
+}
+//------------------------------------------
+var flag2 = false;
+function checkboxes() {
+    var chboxes = document.getElementsByName("chbox");
+    counter = 0;
+    for (var i = 0; i < chboxes.length; i++) {
+        if (chboxes[i].checked == true) {
+            counter++;
+        }
+    }
+    if (counter < 2) {
+        var p4 = document.getElementById("p4");
+        p4.style.display = "block";
+    }
+    else { flag2 = true; }
+}
+function reset() {
+    location.reload();
+}
+function valid() {
+    if (flag == true && flag2 == true) {
+        var p5 = document.getElementById("p5");
+        p5.style.display = "block";
+        p5.style.color = "green";
+
+    }
+}
+
+
+
+/////////////////////////////////////
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day07 task</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="task1">
+        <input type="text" name="name"id="nameinput" placeholder="enter your name">
+        <p id="namevalidation">name must be string and lenght > 4</p>
+        <input  type="number" name="age" id="ageinput" placeholder="enter your age">
+        <p id="agevalidation">age must be > 18</p>
+        <select name="city" id="city">
+            <option value="" checked="">select your city</option>
+            <option value="egtpt">Egypt</option>
+            <option value="france">France</option>
+            <option value="england">England</option>
+        </select>
+        <p id="cityvalidation">city is requred</p>
+        
+        <input type="checkbox" id="football" name="favorite">
+        <label for="football ">football</label>
+        <input type="checkbox" id="basketball" name="favorite">
+        <label for="basketball">basketball</label>
+        <input type="checkbox"id="vollyball" name="favorite">
+        <label for="vollyball">vollyball</label> <br>
+        <p id="favoritevalidation">select two sports at least</p>
+        <button id="btn">submit</button>
+        <button id="reset">reset</button>
+        <p id="formvalid">form is valid</p> 
+        <p id="formNotvalid">form is not valid</p> 
+    </div>
+    <script src="demo.js"></script>
+</body>
+</html>///////////
+// validation of input name and age
+var name = document.getElementById("nameinput");
+var namevalidation=document.getElementById("namevalidation");
+var age = document.getElementById("ageinput");
+var agevalidation=document.getElementById("agevalidation");
+var checkname=false;
+var checkage=false;
+nameinput.addEventListener("input", function (e) {
+	if (e.target.value.length > 4) {
+		nameinput.style.border = "2px solid rgb(4, 104, 104)";
+		namevalidation.style.display = "none";
+        checkname=true;
+	} else {
+		nameinput.style.border = "2px solid red";
+		namevalidation.style.display = "block";
+        checkname=false;
+	}
+});
+ageinput.addEventListener("input", function (e) {
+	if (e.target.value > 18) {
+		ageinput.style.border = "2px solid rgb(4, 104, 104)";
+		agevalidation.style.display = "none";
+        checkage=true;
+	} else {
+		ageinput.style.border = "2px solid red";
+		agevalidation.style.display = "block";
+        checkage=false;
+	}
+});
+// Validatation of select element
+var city = document.getElementById("city");
+var cityvalidation = document.getElementById("cityvalidation");
+var checkcity=false;
+city.addEventListener("change", function() {
+    if (city.value === "") {
+        city.style.border = "2px solid red";
+        cityvalidation.style.display = "block";
+        checkcity=false;
+    } else {
+        city.style.border = "2px solid rgb(4, 104, 104)";
+        cityvalidation.style.display = "none";
+        checkcity=true;
+    }
+});
+
+// Validatation of checkbox inputs
+var football = document.getElementById("football");
+var basketball = document.getElementById("basketball");
+var vollyball = document.getElementById("vollyball");
+var favoritevalidation = document.getElementById("favoritevalidation");
+var checkfavorite=false;
+function validateFavoriteSports() {
+    var checkedCount = 0;
+    if (football.checked) {
+        checkedCount++;
+    }
+    if (basketball.checked) {
+        checkedCount++;
+    }
+    if (vollyball.checked) {
+        checkedCount++;
+    }
+    if (checkedCount < 2) {
+        favoritevalidation.style.display = "block";
+        checkfavorite=false;
+    } else {
+        favoritevalidation.style.display = "none";
+        checkfavorite=true;
+    }
+}
+football.addEventListener("change", validateFavoriteSports);
+basketball.addEventListener("change", validateFavoriteSports);
+vollyball.addEventListener("change", validateFavoriteSports);
+
+// validation of all form
+var formvalid=document.getElementById("formvalid");
+var formNotvalid=document.getElementById("formNotvalid");
+var submitbtn=document.getElementById("btn");
+submitbtn.addEventListener("click",function(){
+    if (checkname && checkage && checkcity && checkfavorite){
+        formvalid.style.display="block";
+        formNotvalid.style.display="none";
+
+    }else{
+        formvalid.style.display="none";
+        formNotvalid.style.display="block";
+    }
+});
+// reset button
+var reset=document.getElementById("reset")
+
+reset.addEventListener('click',function(){
+    location.reload();});
+
+///////////////////////
+.task1{
+    padding: 50px 80px;
+    border:1px solid rgb(4, 104, 104);
+    border-radius: 10px;
+    width: 450px;
+    margin: 100px auto;
+    background-color: white;
+    /* text-align: center; */
+}
+.task1 input{
+        margin-bottom: 30px;
+}
+.task1 input[type='text']{
+    border:1px solid rgb(4, 104, 104);
+    height: 30px;
+    padding: 5px;
+    border-radius:5px;
+    width: 90%;
+    display: block;
+}
+.task1  input[type='number']{
+    border:1px solid rgb(4, 104, 104);
+    height: 30px;
+    padding: 5px;
+    border-radius:5px;
+    width: 90%;
+    display: block;
+}
+.task1 select{
+    display: block;
+    border:1px solid rgb(4, 104, 104);
+    height: 30px;
+    padding: 5px;
+    border-radius:5px;
+    width: 90%;
+    margin-bottom: 30px;
+}
+button,input[type='reset']{
+    display: inline-block;
+    background-color: rgb(4, 104, 104);
+    padding: 10px 40px;
+    color: white;
+    border: 1px solid aqua;
+    border-radius: 10px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+p{
+    color: red;
+    font-size: larger;  
+    display: none;
+}
+#formvalid{
+    color: green;
+}
+
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #p1,
+        #p2,
+        #p3,
+        #p4,
+        #p5 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Registeration Form</h1>
+
+    <form method="get" action="">
+
+        <label for="name "> Name </label>
+        <input type="text" id="name" name="name " placeholder=" Enter your Name">
+        <br>
+        <p id="p1"> name must be string and >4 </p>
+        <br>
+        <label for="age"> Age </label>
+        <input type="text" id="age" placeholder=" Enter your Age">
+        <br>
+        <p id="p2"> age must be > 18 </p>
+        <br>
+        <select id="" name="city" class="select">
+            <option value="city">Select City</option>
+            <option value="cairo">cairo</option>
+            <option value="mansoura">mansoura</option>
+            <option value="benha">benha</option>
+        </select>
+        <p id="p3"> city is required</p>
+        <br>
+        <input type="checkbox" name="chbox" id="box1" value="football">
+        <label for="box1"> football</label><br>
+        <input type="checkbox" name="chbox" id="box2" value="basketball">
+        <label for="box2"> basketball</label><br>
+        <input type="checkbox" name="chbox" id="box3" value="swimming">
+        <label for="box3"> swimming</label><br>
+        <p id="p4"> please select two sports at least </p>
+        <button onclick="valid()">Register</button>
+        <button onclick="reset()">Reset</button>
+        <p id="p5"> Data is Valid</p>
+        <p></p>
+
+    </form>
+    <script src="demo.js"> </script>
+</body>
+
+</html>

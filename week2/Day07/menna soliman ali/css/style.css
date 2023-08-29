@@ -1,0 +1,96 @@
+/* contact */
+.header{
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 25px;
+}
+.contact{
+    padding: 40px 0px;
+}
+
+.contact{
+    width: 650px;
+    text-align: center;
+    padding: 40px;
+    border:1px solid #8E7754;
+    border-radius: 10px;
+    margin: auto;
+    background-color: white;
+    }
+    .contact input{
+        display: block;
+        margin-bottom: 30px;
+    }
+    .contact input[type='text']{
+    border:1px solid black;
+    height: 30px;
+    padding: 5px;
+    border-radius:5px;
+    width: 80%;
+    display: inline;
+    }
+    .contact input[type='number']{
+        border:1px solid rgb(94, 87, 87);
+        height: 30px;
+        padding: 5px;
+        border-radius:5px;
+        width: 80%;
+        display: inline;
+        align-self: flex-end;
+    }
+    .contact input[type='submit'],.contact input[type="reset"]{
+        background-color: #8E7754;
+        padding: 10px 40px;
+        color: white;
+        border: 1px solid #8E7754;
+        border-radius: 10px;
+        margin-top: 40px;
+        font-size: 20px;
+    }
+    .contact  input[type='submit']:hover,.contact input[type="reset"]:hover{
+        color: black;
+        background-color: #fff;
+    }
+
+p.alret{
+    display: none;
+}
+p{
+    color: red;
+}   
+
+#isvalid{
+    font-size: 18px;
+    font-weight: 400;
+    color: green;
+}
+.btn{
+    display: flex;
+    justify-content: space-around;
+}
+select{
+    width: 70%;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 19px;
+    
+}
+input[type="checkbox"]{
+    display: inline-block;
+}
+.check{
+    margin: 10px;
+}
+label{
+    margin-right: 35px;
+}

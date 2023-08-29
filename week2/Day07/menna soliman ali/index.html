@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400&family=Alegreya:ital,wght@1,400;1,500;1,600&family=Nunito:wght@200;300;400;500;600&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="contact" id="contact">
+            <div class="container">
+                <input type="text" placeholder="Enter your name here" name="name">
+                <p class="alret" id="namevalid">Your Name Length must be greater than 3</p>
+                <input type="number" placeholder="Enter your age here" name="age">
+                <p class="alret" id="agevalid">Your age must be greater than 18</p>
+                <select id="select" required>
+                    <option hidden>choose your city</option>
+                    <option>Cairo</option>
+                    <option>Tanta</option>
+                    <option>Banha</option>
+                </select>
+                <p class="alret" id="selectalert">select is required</p>
+                <div class="check">
+                    <input type="checkbox" name="checkbox" id="foot">
+                <label for="foot">
+                     Football
+                </label>
+                <input type="checkbox" name="checkbox" id="teniss">
+                <label for="teniss">
+                    Teniss
+                </label>
+                <input type="checkbox" name="checkbox" id="swim">
+                <label for="swim">
+                     Swim
+                </label>
+                <p class="alret" id="checkarlet">select to sports at least</p>
+                </div>
+                <div class="btn">
+                    <input type="submit" value="Regester" id="registerbtn" class="cen" >
+                    <input type="reset" value="Reset" id="reset" class="cen">
+                </div>
+                
+                <h6 id="isvalid"></h6>
+            </div>
+        </div>
+    </div>    
+    <script src="./js/script.js"></script>
+</body>
+</html>
